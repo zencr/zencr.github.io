@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Zerrium Server Maps</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-primary">
+					<i class="fa fa-bars"></i>
+					<span class="sr-only">Toggle Menu</span>
+				</button>
+			</div>
+			<div class="p-4 pt-5">
+				<h1><a href="index.html" class="logo" onclick="$('#show').hide();">Server Maps</a></h1>
+				<ul class="list-unstyled components mb-5">
+					<li>
+						<a href="#zen4" data-toggle="collapse" class="dropdown-toggle">Zencraft 4</a>
+						<ul class="collapse list-unstyled" id="zen4">
+							<li>
+								<a href="#" onclick="onClickNav('zen4_1')">World</a>
+							</li>
+							<li>
+								<a href="#" onclick="onClickNav('zen4_0')">Nether</a>
+							</li>
+							<li>
+								<a href="#" onclick="onClickNav('zen4_2')">The End</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Page Content  -->
+		<a id="full" href="" target="_blank" style="display: none;"></a>
+		<div id="content" class="p-5">
+			<div id="show" style="display: none;">
+				<button class="btn btn-primary mt-3 ml-5" style="position: absolute; z-index: 999;" onclick="document.getElementById('full').click();">Show Full Map</button>
+				<iframe id="map" src="" style="width: 80%; height: 90%; position: absolute;">
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		function onClickNav(item) {
+			console.log(item);
+			$('#show').show();
+
+			var link = "";
+			switch(item){
+				case "zen4_0":
+					link = "https://maps.zerrium.com/zen4/nether/unmined.index.html";
+					break;
+
+				case "zen4_1":
+					link = "https://maps.zerrium.com/zen4/world/unmined.index.html";
+					break;
+
+				case "zen4_2":
+					link = "https://maps.zerrium.com/zen4/end/unmined.index.html";
+					break;
+			};
+
+			document.getElementById('full').href = link;
+			document.getElementById('map').src = link;
+		}
+	</script>
+</body>
+
+</html>
