@@ -21,6 +21,9 @@
     <script type="text/javascript" src="unmined.map.properties.js"></script>
     <script type="text/javascript" src="unmined.map.regions.js"></script>
 
+    <!-- Custom markers -->
+    <script type="text/javascript" src="custom.markers.js"></script>
+
     <!-- uNmINeD JS -->
     <script type="text/javascript" src="unmined.openlayers.js"></script>
 
@@ -67,33 +70,9 @@
 
         document.title = UnminedMapProperties.worldName + " - " + document.title;
 
-        // Uncomment the following section to add markers (use https://mapmarker.io/editor to generate marker image URLs)
-        // Remember to rename unmined.index.html or create a copy to prevent overwrite on map generation
-
-        /*
-        
-        UnminedMapProperties.markers.push(
-            {
-                x: 0, z: 0,
-                image: "https://cdn.mapmarker.io/api/v1/pin?size=40&background=%23F44E3B&icon=fa-star&color=%23FFFFFF&voffset=0&hoffset=0",
-                imageAnchor: [0.5, 1]
-            },
-
-            {
-                x: 200, z: 200,
-                image: "https://cdn.mapmarker.io/api/v1/pin?size=40&background=%23F44E3B&icon=fa-star&color=%23FFFFFF&voffset=0&hoffset=0",
-                imageAnchor: [0.5, 1],
-                text: "Marker with text", textColor: "red", offsetX: 0, offsetY: 20, font: "bold 20px Calibri,sans serif"
-            },
-
-            {
-                x: -200, z: -200,
-                text: "Text only", textColor: "Yellow", offsetX: 0, offsetY: 0, font: "bold 50px Calibri,sans serif"
-            }
-        );
-        
-        */
-
+        if (UnminedCustomMarkers && UnminedCustomMarkers.isEnabled && UnminedCustomMarkers.markers) {
+            UnminedMapProperties.markers = UnminedMapProperties.markers.concat(UnminedCustomMarkers.markers);
+        }
 
         let unmined = new Unmined();
         unmined.map('map', UnminedMapProperties, UnminedRegions);

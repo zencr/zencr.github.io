@@ -185,7 +185,8 @@ class Unmined {
             if (item.image)
                 style.setImage(new ol.style.Icon({
                     src: item.image,
-                    anchor: item.imageAnchor
+                    anchor: item.imageAnchor,
+                    scale: item.imageScale
                 }));
 
             if (item.text)
