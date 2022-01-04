@@ -65,6 +65,7 @@ UnminedCustomMarkers = {
         */
 
         // --- Spawn ---
+        /*
         {
             x: -500,
             z: -500,
@@ -96,6 +97,7 @@ UnminedCustomMarkers = {
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
         },
+        */
 
         {
             x: 16,
@@ -104,7 +106,7 @@ UnminedCustomMarkers = {
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
             text: "World Spawn Point",
-            textColor: "red", 
+            textColor: "yellow", 
             offsetX: 0,
             offsetY: 20,
             font: "bold 20px Calibri,sans serif",
@@ -112,6 +114,7 @@ UnminedCustomMarkers = {
         // --- Spawn ---
 
         // --- Shopping District ---
+        /*
         {
             x: -864,
             z: 752,
@@ -143,6 +146,7 @@ UnminedCustomMarkers = {
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
         },
+        */
 
         {
             x: -744,
@@ -151,13 +155,14 @@ UnminedCustomMarkers = {
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
             text: "Shopping District",
-            textColor: "red", 
+            textColor: "yellow", 
             offsetX: 0,
             offsetY: 20,
             font: "bold 20px Calibri,sans serif",
         },
         // --- Shopping District ---
 
+        /*
         // --- Claimed Area ---
 
         // --- Terra ---
@@ -550,6 +555,7 @@ UnminedCustomMarkers = {
 
 
         // --- Claimed Area ---
+        */
 
 
         // do not delete the following two closing brackets
