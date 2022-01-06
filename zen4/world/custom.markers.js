@@ -65,40 +65,6 @@ UnminedCustomMarkers = {
         */
 
         // --- Spawn ---
-        /*
-        {
-            x: -500,
-            z: -500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 500,
-            z: -500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -500,
-            z: 500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 500,
-            z: 500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-        */
-
         {
             x: 16,
             z: 0,
@@ -114,40 +80,6 @@ UnminedCustomMarkers = {
         // --- Spawn ---
 
         // --- Shopping District ---
-        /*
-        {
-            x: -864,
-            z: 752,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -624,
-            z: 1080,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -864,
-            z: 1080,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -624,
-            z: 752,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-        */
-
         {
             x: -744,
             z: 916,
@@ -162,400 +94,88 @@ UnminedCustomMarkers = {
         },
         // --- Shopping District ---
 
-        /*
         // --- Claimed Area ---
 
         // --- Terra ---
-        {
-            x: -1000,
-            z: -900,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -600,
-            z: -500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1000,
-            z: -500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -600,
-            z: -900,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
         {
             x: -800,
             z: -700,
             text: "Terra Base", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
         // --- Terra ---
 
         // --- Jerkies ---
         {
-            x: -1100,
-            z: -1000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1500,
-            z: -1400,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1100,
-            z: -1400,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1500,
-            z: -1000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1300,
-            z: -1200,
-            text: "Jerkies", 
-            textColor: "yellow", 
-            offsetX: 0,
-            offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
-        },
-        // -----
-        {
-            x: -1100,
-            z: -1000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1500,
-            z: -600,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1100,
-            z: -600,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1500,
-            z: -1000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
             x: -1300,
             z: -800,
             text: "Jerkies", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
-        },
-        // -----
-        {
-            x: -1500,
-            z: -600,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1100,
-            z: -250,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1500,
-            z: -250,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1100,
-            z: -600,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1300,
-            z: -425,
-            text: "Jerkies", 
-            textColor: "yellow", 
-            offsetX: 0,
-            offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
         // --- Jerkies ---
 
         // --- YeetGenic ---
         {
-            x: 1500,
-            z: -1000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 1700,
-            z: -1200,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 1500,
-            z: -1200,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 1700,
-            z: -1000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
             x: 1600,
             z: -1100,
             text: "YeetGenic", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
-        // ---
-        {
-            x: 1700,
-            z: -1200,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 2000,
-            z: -1400,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 1700,
-            z: -1400,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: 2000,
-            z: -1200,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
         {
             x: 1850,
             z: -1300,
             text: "YeetGenic", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
         // --- YeetGenic ---
 
         // --- JourBlock ---
         {
-            x: -1800,
-            z: 400,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2200,
-            z: 800,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -1800,
-            z: 800,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2200,
-            z: 400,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
             x: -2000,
             z: 600,
             text: "JourBlock", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
         // --- JourBlock ---
 
         // --- Hexacorp ---
         {
-            x: -2000,
-            z: -1600,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2400,
-            z: -2000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2000,
-            z: -2000,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2400,
-            z: -1600,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
             x: -2200,
             z: -1800,
             text: "Hexacorp", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
-        // ---
-        {
-            x: -2300,
-            z: -2500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2700,
-            z: -2900,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2300,
-            z: -2900,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
-        {
-            x: -2700,
-            z: -2500,
-            image: "circle.png",
-            imageAnchor: [0.5, 1],
-            imageScale: 0.5,
-        },
-
         {
             x: -2500,
             z: -2700,
             text: "Hexacorp HQ", 
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
-            font: "bold 50px Calibri,sans serif",
+            font: "bold 14px Calibri,sans serif",
         },
         // --- Hexacorp ---
 
 
         // --- Claimed Area ---
-        */
 
 
         // do not delete the following two closing brackets

@@ -164,6 +164,7 @@ class Unmined {
         {
             var markersLayer = this.createMarkersLayer(options.markers, dataProjection, viewProjection);
             map.addLayer(markersLayer);
+            map.addLayer(this.createBoundingsLayer(dataProjection, viewProjection));
         }
 
         this.openlayersMap = map;
@@ -213,6 +214,174 @@ class Unmined {
             source: vectorSource
         });
         return vectorLayer;
+    }
+
+    createBoundingsLayer(dataProjection, viewProjection) {
+        const styles = [
+            /* We are using two different styles for the polygons:
+             *  - The first style is for the polygons themselves.
+             *  - The second style is to draw the vertices of the polygons.
+             *    In a custom `geometry` function the vertices of a polygon are
+             *    returned as `MultiPoint` geometry, which will be used to render
+             *    the style.
+             */
+            new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: 'yellow',
+                    width: 2,
+                }),
+            }),
+            new ol.style.Style({
+                image: new ol.style.Circle({
+                    radius: 3,
+                    fill: new ol.style.Fill({
+                        color: 'orange',
+                    }),
+                }),
+                geometry: function (feature) {
+                    // return the coordinates of the first ring of the polygon
+                    const coordinates = feature.getGeometry().getCoordinates()[0];
+                    return new ol.geom.MultiPoint(coordinates);
+                },
+            }),
+        ];
+
+        const geojsonObject = {
+            'type': 'FeatureCollection',
+            'crs': {
+                'type': 'name',
+                'properties': {
+                    'name': 'EPSG:3857',
+                },
+            },
+            'features': [
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Spawn
+                            [
+                                ol.proj.transform([500, -500], dataProjection, viewProjection),
+                                ol.proj.transform([500, 500], dataProjection, viewProjection),
+                                ol.proj.transform([-500, 500], dataProjection, viewProjection),
+                                ol.proj.transform([-500, -500], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Shopping District
+                            [
+                                ol.proj.transform([-864, 752], dataProjection, viewProjection),
+                                ol.proj.transform([-624, 752], dataProjection, viewProjection),
+                                ol.proj.transform([-624, 1080], dataProjection, viewProjection),
+                                ol.proj.transform([-864, 1080], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Terra Base
+                            [
+                                ol.proj.transform([-1000, -900], dataProjection, viewProjection),
+                                ol.proj.transform([-1000, -500], dataProjection, viewProjection),
+                                ol.proj.transform([-600, -500], dataProjection, viewProjection),
+                                ol.proj.transform([-600, -900], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Jerkies
+                            [
+                                ol.proj.transform([-1500, -1400], dataProjection, viewProjection),
+                                ol.proj.transform([-1500, -250], dataProjection, viewProjection),
+                                ol.proj.transform([-1100, -250], dataProjection, viewProjection),
+                                ol.proj.transform([-1100, -1400], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // YeetGenic
+                            [
+                                ol.proj.transform([1500, -1200], dataProjection, viewProjection),
+                                ol.proj.transform([1500, -1000], dataProjection, viewProjection),
+                                ol.proj.transform([1700, -1000], dataProjection, viewProjection),
+                                ol.proj.transform([1700, -1400], dataProjection, viewProjection),
+                                ol.proj.transform([2000, -1400], dataProjection, viewProjection),
+                                ol.proj.transform([2000, -1200], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // JourBlock
+                            [
+                                ol.proj.transform([-1800, 400], dataProjection, viewProjection),
+                                ol.proj.transform([-1800, 800], dataProjection, viewProjection),
+                                ol.proj.transform([-2200, 800], dataProjection, viewProjection),
+                                ol.proj.transform([-2200, 400], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Hexacorp
+                            [
+                                ol.proj.transform([-2000, -1600], dataProjection, viewProjection),
+                                ol.proj.transform([-2000, -2000], dataProjection, viewProjection),
+                                ol.proj.transform([-2400, -2000], dataProjection, viewProjection),
+                                ol.proj.transform([-2400, -1600], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Hexacorp HQ
+                            [
+                                ol.proj.transform([-2300, -2500], dataProjection, viewProjection),
+                                ol.proj.transform([-2700, -2500], dataProjection, viewProjection),
+                                ol.proj.transform([-2700, -2900], dataProjection, viewProjection),
+                                ol.proj.transform([-2300, -2900], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+            ],
+        };
+
+        const source = new ol.source.Vector({
+            features: new ol.format.GeoJSON().readFeatures(geojsonObject),
+        });
+
+        const layer = new ol.layer.Vector({
+            source: source,
+            style: styles,
+        });
+
+        return layer;
     }
 
 }
