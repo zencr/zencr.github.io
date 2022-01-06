@@ -106,9 +106,9 @@ UnminedCustomMarkers = {
             imageAnchor: [0.2, 1],
             imageScale: 0.2,
             text: "World Spawn Point",
-            textColor: "red", 
+            textColor: "white", 
             offsetX: 0,
-            offsetY: 12,
+            offsetY: 10,
             font: "bold 14px Calibri,sans serif",
         },
         // --- Spawn ---
@@ -155,9 +155,9 @@ UnminedCustomMarkers = {
             imageAnchor: [0.2, 1],
             imageScale: 0.2,
             text: "Shopping District",
-            textColor: "yellow", 
+            textColor: "white", 
             offsetX: 0,
-            offsetY: 12,
+            offsetY: 10,
             font: "bold 14px Calibri,sans serif",
         },
         // --- Shopping District ---
