@@ -198,7 +198,11 @@ class Unmined {
                     offsetY: item.offsetY,
                     fill: new ol.style.Fill({
                         color: item.textColor
-                    })
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#000',
+                        width: 2
+                    }),
                 }));
 
             feature.setStyle(style);
