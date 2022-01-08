@@ -106,6 +106,15 @@ UnminedCustomMarkers = {
             offsetY: 0, 
             font: "bold 14px Calibri,sans serif",
         },
+        {
+            x: -250,
+            z: -1050,
+            text: "Terra Island", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
         // --- Terra ---
 
         // --- Jerkies ---
@@ -118,21 +127,39 @@ UnminedCustomMarkers = {
             offsetY: 0, 
             font: "bold 14px Calibri,sans serif",
         },
-        // --- Jerkies ---
-
-        // --- YeetGenic ---
         {
-            x: 1600,
-            z: -1100,
-            text: "YeetGenic", 
+            x: -1708,
+            z: -893,
+            text: "Jerkies", 
             textColor: "white", 
             offsetX: 0,
             offsetY: 0, 
             font: "bold 14px Calibri,sans serif",
         },
         {
-            x: 1850,
-            z: -1300,
+            x: -1043,
+            z: -1161,
+            text: "Jerkies", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
+        {
+            x: -738,
+            z: -1139,
+            text: "Jerkies", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
+        // --- Jerkies ---
+
+        // --- YeetGenic ---
+        {
+            x: 1750,
+            z: -1250,
             text: "YeetGenic", 
             textColor: "white", 
             offsetX: 0,

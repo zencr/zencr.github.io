@@ -78,6 +78,18 @@ UnminedCustomMarkers = {
 
         // add your markers here
 
+        // --- Hexacorp ---
+        {
+            x: -400,
+            z: -300,
+            text: "HexaFortress 1", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
+        // --- Hexacorp ---
+
 
 
 
