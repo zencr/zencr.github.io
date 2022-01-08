@@ -108,7 +108,7 @@ UnminedCustomMarkers = {
         },
         {
             x: -250,
-            z: -1050,
+            z: 1050,
             text: "Terra Island", 
             textColor: "white", 
             offsetX: 0,
