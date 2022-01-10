@@ -56,6 +56,18 @@ UnminedCustomMarkers = {
         },
         // --- Hexacorp ---
 
+        // --- YeetGenic---
+        {
+            x: 162,
+            z: -275,
+            text: "YeetGenic Fortress", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
+        // --- YeetGenic---
+
 
 
 

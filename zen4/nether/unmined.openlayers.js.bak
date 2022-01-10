@@ -323,6 +323,20 @@ class Unmined {
                         ],
                     },
                 },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // YeetGenic Fortress
+                            [
+                                ol.proj.transform([150, -250], dataProjection, viewProjection),
+                                ol.proj.transform([175, -250], dataProjection, viewProjection),
+                                ol.proj.transform([175, -300], dataProjection, viewProjection),
+                                ol.proj.transform([150, -300], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
             ],
         };
 
