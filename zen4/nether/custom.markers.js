@@ -68,7 +68,17 @@ UnminedCustomMarkers = {
         },
         // --- YeetGenic---
 
-
+        // --- Terra ---
+        {
+            x: 400,
+            z: 170,
+            text: "Terra Fortress", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
+        // --- Terra ---
 
 
         // do not delete the following two closing brackets

@@ -337,6 +337,20 @@ class Unmined {
                         ],
                     },
                 },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // Terra Fortress
+                            [
+                                ol.proj.transform([250, 60], dataProjection, viewProjection),
+                                ol.proj.transform([550, 60], dataProjection, viewProjection),
+                                ol.proj.transform([550, 280], dataProjection, viewProjection),
+                                ol.proj.transform([250, 280], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
             ],
         };
 
