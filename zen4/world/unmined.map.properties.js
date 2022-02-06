@@ -4,9 +4,9 @@ var UnminedMapProperties = {
     maxZoom: 1,
     defaultZoom: 0,
     imageFormat: "jpeg",
-    minRegionX: -18,
-    minRegionZ: -11,
-    maxRegionX: 5,
+    minRegionX: -32,
+    minRegionZ: -25,
+    maxRegionX: 9,
     maxRegionZ: 8,
     worldName: "world",
     markers: new Array()
