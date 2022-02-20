@@ -420,8 +420,8 @@ class Unmined {
                         'coordinates': [ // Hexacorp HQ
                             [
                                 ol.proj.transform([-2300, -2500], dataProjection, viewProjection),
-                                ol.proj.transform([-2700, -2500], dataProjection, viewProjection),
-                                ol.proj.transform([-2700, -2900], dataProjection, viewProjection),
+                                ol.proj.transform([-2800, -2500], dataProjection, viewProjection),
+                                ol.proj.transform([-2800, -2900], dataProjection, viewProjection),
                                 ol.proj.transform([-2300, -2900], dataProjection, viewProjection),
                             ],
                         ],

@@ -164,7 +164,6 @@ class Unmined {
         {
             var markersLayer = this.createMarkersLayer(options.markers, dataProjection, viewProjection);
             map.addLayer(markersLayer);
-            map.addLayer(this.createBoundingsLayer(dataProjection, viewProjection));
         }
 
         this.openlayersMap = map;
@@ -198,11 +197,7 @@ class Unmined {
                     offsetY: item.offsetY,
                     fill: new ol.style.Fill({
                         color: item.textColor
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: '#000',
-                        width: 2
-                    }),
+                    })
                 }));
 
             feature.setStyle(style);
@@ -218,110 +213,6 @@ class Unmined {
             source: vectorSource
         });
         return vectorLayer;
-    }
-
-    createMarkersLayer(markers, dataProjection, viewProjection) {
-        var features = [];
-
-        for (var i = 0; i < markers.length; i++) {
-            var item = markers[i];
-            var longitude = item.x;
-            var latitude = item.z;
-
-            var feature = new ol.Feature({
-                geometry: new ol.geom.Point(ol.proj.transform([longitude, latitude], dataProjection, viewProjection))
-            });
-
-            var style = new ol.style.Style();
-            if (item.image)
-                style.setImage(new ol.style.Icon({
-                    src: item.image,
-                    anchor: item.imageAnchor,
-                    scale: item.imageScale
-                }));
-
-            if (item.text)
-                style.setText(new ol.style.Text({
-                    text: item.text,
-                    font: item.font,
-                    offsetX: item.offsetX,
-                    offsetY: item.offsetY,
-                    fill: new ol.style.Fill({
-                        color: item.textColor
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: '#000',
-                        width: 2
-                    }),
-                }));
-
-            feature.setStyle(style);
-
-            features.push(feature);
-        }
-
-        var vectorSource = new ol.source.Vector({
-            features: features
-        });
-
-        var vectorLayer = new ol.layer.Vector({
-            source: vectorSource
-        });
-        return vectorLayer;
-    }
-
-    createBoundingsLayer(dataProjection, viewProjection) {
-        const styles = [
-            /* We are using two different styles for the polygons:
-             *  - The first style is for the polygons themselves.
-             *  - The second style is to draw the vertices of the polygons.
-             *    In a custom `geometry` function the vertices of a polygon are
-             *    returned as `MultiPoint` geometry, which will be used to render
-             *    the style.
-             */
-            new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: 'yellow',
-                    width: 2,
-                }),
-            }),
-            new ol.style.Style({
-                image: new ol.style.Circle({
-                    radius: 3,
-                    fill: new ol.style.Fill({
-                        color: 'orange',
-                    }),
-                }),
-                geometry: function (feature) {
-                    // return the coordinates of the first ring of the polygon
-                    const coordinates = feature.getGeometry().getCoordinates()[0];
-                    return new ol.geom.MultiPoint(coordinates);
-                },
-            }),
-        ];
-
-        const geojsonObject = {
-            'type': 'FeatureCollection',
-            'crs': {
-                'type': 'name',
-                'properties': {
-                    'name': 'EPSG:3857',
-                },
-            },
-            'features': [
-            ],
-        };
-
-        const source = new ol.source.Vector({
-            features: new ol.format.GeoJSON().readFeatures(geojsonObject),
-        });
-
-        const layer = new ol.layer.Vector({
-            source: source,
-            style: styles,
-        });
-
-        return layer;
     }
 
 }

@@ -75,12 +75,39 @@ UnminedCustomMarkers = {
             image: "location-pin.png",
             imageAnchor: [0.2, 1],
             imageScale: 0.2,
-            text: "???",
+            text: "Gravel Mountain",
             textColor: "white", 
             offsetX: 0,
             offsetY: 10,
             font: "bold 14px Calibri,sans serif",
         },
+
+        {
+            x: -55,
+            z: 410,
+            image: "location-pin.png",
+            imageAnchor: [0.2, 1],
+            imageScale: 0.2,
+            text: "Pillager Outpost, Jungle",
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 10,
+            font: "bold 14px Calibri,sans serif",
+        },
+
+        {
+            x: -110,
+            z: 435,
+            image: "location-pin.png",
+            imageAnchor: [0.2, 1],
+            imageScale: 0.2,
+            text: "Village for Raid",
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 10,
+            font: "bold 14px Calibri,sans serif",
+        },
+
 
         // --- Terra ---
         {
