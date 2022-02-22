@@ -116,7 +116,7 @@ UnminedCustomMarkers = {
             font: "bold 14px Calibri,sans serif",
         },
         {
-            x: 300,
+            x: 1900,
             z: -188,
             text: "Terra City", 
             textColor: "white", 
