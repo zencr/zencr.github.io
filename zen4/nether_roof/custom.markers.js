@@ -149,6 +149,16 @@ UnminedCustomMarkers = {
             font: "bold 14px Calibri,sans serif",
         },
 
+        {
+            x: -50,
+            z: -20,
+            text: "Terra Highway",
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0,
+            font: "bold 14px Calibri,sans serif",
+        },
+
         // --- JourBlock ---
         {
             x: -246,

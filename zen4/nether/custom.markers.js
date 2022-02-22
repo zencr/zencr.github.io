@@ -80,6 +80,18 @@ UnminedCustomMarkers = {
         },
         // --- Terra ---
 
+        // --- JourBlock ---
+        {
+            x: -240,
+            z: 80,
+            text: "JourBlock", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
+        // --- JourBlock ---
+
 
         // do not delete the following two closing brackets
     ]

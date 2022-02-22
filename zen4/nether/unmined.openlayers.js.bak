@@ -351,6 +351,20 @@ class Unmined {
                         ],
                     },
                 },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        'coordinates': [ // JourBlock
+                            [
+                                ol.proj.transform([-310, -40], dataProjection, viewProjection),
+                                ol.proj.transform([-170, -40], dataProjection, viewProjection),
+                                ol.proj.transform([-170, 200], dataProjection, viewProjection),
+                                ol.proj.transform([-310, 200], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
             ],
         };
 

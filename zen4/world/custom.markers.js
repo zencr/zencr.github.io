@@ -115,6 +115,15 @@ UnminedCustomMarkers = {
             offsetY: 0, 
             font: "bold 14px Calibri,sans serif",
         },
+        {
+            x: 300,
+            z: -188,
+            text: "Terra City", 
+            textColor: "white", 
+            offsetX: 0,
+            offsetY: 0, 
+            font: "bold 14px Calibri,sans serif",
+        },
         // --- Terra ---
 
         // --- Jerkies ---

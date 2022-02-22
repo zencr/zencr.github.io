@@ -319,6 +319,20 @@ class Unmined {
                     'type': 'Feature',
                     'geometry': {
                         'type': 'Polygon',
+                        'coordinates': [ // Terra City
+                            [
+                                ol.proj.transform([1600, -375], dataProjection, viewProjection),
+                                ol.proj.transform([2200, -375], dataProjection, viewProjection),
+                                ol.proj.transform([2200, 0], dataProjection, viewProjection),
+                                ol.proj.transform([1600, 0], dataProjection, viewProjection),
+                            ],
+                        ],
+                    },
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
                         'coordinates': [ // Jerkies
                             [
                                 ol.proj.transform([-1500, -1400], dataProjection, viewProjection),
