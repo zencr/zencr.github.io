@@ -321,8 +321,8 @@ class Unmined {
                         'type': 'Polygon',
                         'coordinates': [ // Terra City
                             [
-                                ol.proj.transform([1600, -375], dataProjection, viewProjection),
-                                ol.proj.transform([2200, -375], dataProjection, viewProjection),
+                                ol.proj.transform([1600, -750], dataProjection, viewProjection),
+                                ol.proj.transform([2200, -750], dataProjection, viewProjection),
                                 ol.proj.transform([2200, 0], dataProjection, viewProjection),
                                 ol.proj.transform([1600, 0], dataProjection, viewProjection),
                             ],
